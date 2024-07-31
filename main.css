@@ -10,6 +10,8 @@
   height: 300;
   position: relative;
   float: left;
+  margin-left: 20% ;
+  margin-top: 10%;
 }
 .carousel img {
   width: 100%;
@@ -27,3 +29,58 @@
 .nextlink {
   margin-right: 20px;
 }
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel {
+  position: relative;
+  width: 80%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  flex: 0 0 100%;
+}
+
+.image-hidden {
+  display: none; /* Initially hide images */
+}
+
+.image-shown {
+  display: block; /* Show only the active image */
+}
+
+.previouslink,
+.nextlink {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.5); /* Optional: background for better visibility */
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.previouslink {
+  left: 10px;
+}
+
+.nextlink {
+  right: 10px;
+}
+
+  
