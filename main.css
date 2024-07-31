@@ -1,0 +1,29 @@
+.image-shown {
+  display: inline-block;
+}
+.image-hidden {
+  display: none;
+}
+
+.carousel-images {
+  width: 700px;
+  height: 300;
+  position: relative;
+  float: left;
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.previouslink,
+.nextlink {
+  float: left;
+  margin-top: 170px;
+}
+.previouslink {
+  margin-right: 20px;
+}
+.nextlink {
+  margin-right: 20px;
+}
