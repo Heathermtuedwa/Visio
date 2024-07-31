@@ -10,7 +10,7 @@
   height: 300;
   position: relative;
   float: left;
-  margin-left: 20% ;
+  margin-left: 20%;
   margin-top: 10%;
 }
 .carousel img {
@@ -69,7 +69,12 @@
   font-size: 30px;
   color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.5); /* Optional: background for better visibility */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: background for better visibility */
   padding: 10px;
   cursor: pointer;
   z-index: 10;
@@ -82,5 +87,20 @@
 .nextlink {
   right: 10px;
 }
-
-  
+.nextlink {
+  font-size: 50px; /* Adjust the size as needed */
+  color: white; /* Change color if needed */
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  width: 40px; /* Width of the button */
+  height: 40px; /* Height of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold; /* Make arrow bold */
+  margin-bottom: 48px;
+}
