@@ -1,106 +1,173 @@
-.image-shown {
-  display: inline-block;
-}
-.image-hidden {
-  display: none;
-}
-
-.carousel-images {
-  width: 700px;
-  height: 300;
+.carousel-container {
   position: relative;
-  float: left;
-  margin-left: 20%;
-  margin-top: 10%;
-}
-.carousel img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-}
-.previouslink,
-.nextlink {
-  float: left;
-  margin-top: 170px;
-}
-.previouslink {
-  margin-right: 20px;
-}
-.nextlink {
-  margin-right: 20px;
-}
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.carousel {
-  position: relative;
-  width: 80%; /* Adjust as needed */
+  width: 69%;
   overflow: hidden;
-}
+  margin: auto; 
+  margin-top: 8%;
+  height: 600px;
 
+}
+                                                                                                                                                                                  
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-images img {
-  width: 100%;
-  height: auto;
-  flex: 0 0 100%;
+  width: 80%;
+  flex: 0 0 100%; 
+  /* height: 80%; */
+  border-radius: 1%;
 }
+ 
 
-.image-hidden {
-  display: none; /* Initially hide images */
-}
-
-.image-shown {
-  display: block; /* Show only the active image */
-}
-
-.previouslink,
-.nextlink {
+.nextlink, .prevlink {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-  text-decoration: none;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Optional: background for better visibility */
+  color: #fff;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
 }
 
-.previouslink {
+.nextlink {
+  right: 10px;
+}
+   
+.prevlink {
   left: 10px;
 }
-
 .nextlink {
-  right: 10px;
-}
-.nextlink {
-  font-size: 50px; /* Adjust the size as needed */
-  color: white; /* Change color if needed */
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  width: 40px; /* Width of the button */
-  height: 40px; /* Height of the button */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+  position: absolute;
+  top: 40%;
+  right: 10px; 
+  color: #ffffff; 
+  padding: 15px 25px; 
+  font-size: 400%;
+  line-height: 1; 
   cursor: pointer;
-  font-weight: bold; /* Make arrow bold */
-  margin-bottom: 48px;
+  z-index: 10;
+  border-radius: 50%; 
+  text-align: center; 
+  transform: translateY(-50%); 
+  text-decoration: none; 
+}
+
+.nextlink:hover {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px; 
+  left: 80%;
+  transform: translateX(-50%); 
+  display: flex;
+  gap: 8px; 
+  margin-bottom: 10%;
+}
+
+.carousel-indicator {
+  width: 12px; /* Size of each indicator */
+  height: 12px; /* Size of each indicator */
+  background-color: rgba(255, 255, 255, 0.5); /* Default color of the indicator */
+  border-radius: 50%; /* Make indicators circular */
+  cursor: pointer; /* Cursor to indicate clickable */
+}
+
+.carousel-indicator.active {
+  background-color: #161111; /* Color for the active indicator */
+}
+
+@media (max-width: 1200px) {
+  .carousel-container {
+    width: 80%; /* Adjust width for larger tablets and smaller desktops */
+    height: 500px; /* Adjust height */
+  }
+
+  .carousel-images img {
+    width: 90%; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-container {
+    width: 100%; 
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95%; 
+    height: 300px; 
+  }
+}
+
+.carousel-logo {
+  position: absolute;
+  top: 5%; 
+  left:20%; 
+  width: 160px;
+  z-index: 20; 
+}
+
+.hamburger-container {
+  position: absolute;
+  top: 60px; /* Distance from the top edge */
+  right: 16%; /* Distance from the right edge */
+  z-index: 20; /* Ensure it is above other elements */
+}
+
+/* Hamburger menu styling */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px; /* Width of the hamburger menu */
+  height: 20px; /* Height of the hamburger menu */
+  cursor: pointer; /* Indicate it is clickable (optional) */
+}
+
+/* Individual bars in the hamburger menu */
+.hamburger-bar {
+  width: 100%; /* Full width of the container */
+  height: 3px; /* Thickness of the bars */
+  background-color: #000; /* Color of the bars */
+  border-radius: 3px; /* Rounded edges of the bars */
+}
+
+.text {
+  font-family:'Lora', serif; /* Choose a clean, readable font */
+  font-size: 16px; /* Set a standard font size */
+  line-height: 1.6; /* Increase line height for better readability */
+  color: #333; /* Set a dark gray color for text */
+  margin: 20px auto; /* Center the paragraph with margin */
+  padding: 0 10px; /* Add some padding for better spacing on smaller screens */
+  max-width: 800px; /* Set a max-width to prevent the text from being too wide */
+  text-align: justify;
+  margin-top: 20px; /* Space between carousel and text */
+  margin-right:36% ;
+}
+.symbols {
+  position: absolute;
+  bottom: 20px; 
+  right: 10px;
+  width: 30%; 
+  z-index: 20;  
+  text-align: justify;
+}
+
+.banner {
+  position: absolute;
+  top: 44%; /* Position from the top of the carousel */
+  right: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background: rgb(54, 73, 216); /* Semi-transparent background */
+  color: #fff; /* White text color */
+  padding: 10px; /* Padding around the banner */
+  text-align: center; /* Center text */
+  z-index: 10; /* Ensure it stays on top of carousel images */
+  width: 30%; /* Adjust width as needed */
+  
 }
