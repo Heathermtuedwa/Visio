@@ -43,4 +43,8 @@ $(document).ready(function () {
     currentIndex = index;
     showImage(index);
   });
+
+   
+
 });
+

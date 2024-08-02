@@ -1,6 +1,13 @@
+html{
+  /* margin:  0;
+  box-sizing: border-box; */
+  height: 100%;
+  padding: 1rem;
+}
+
 .carousel-container {
   position: relative;
-  width: 69%;
+  width: 83%;
   overflow: hidden;
   margin: auto;
   margin-top: 8%;
@@ -16,7 +23,7 @@
   width: 80%;
   flex: 0 0 100%;
   /* height: 80%; */
-  border-radius: 1%;
+  /* border-radius: 1%; */
 }
 
 .nextlink,
@@ -59,11 +66,11 @@
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
-  left: 80%;
+  left: 86%;
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
-  margin-bottom: 10%;
+  margin-bottom: 6%;
 }
 
 .carousel-indicator {
@@ -83,94 +90,224 @@
   background-color: #161111; /* Color for the active indicator */
 }
 
-@media (max-width: 1200px) {
-  .carousel-container {
-    width: 80%; /* Adjust width for larger tablets and smaller desktops */
-    height: 500px; /* Adjust height */
-  }
-
-  .carousel-images img {
-    width: 90%; /* Adjust width for medium screens */
-  }
-}
-
-@media (max-width: 992px) {
-  .carousel-container {
-    width: 100%;
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-container {
-    width: 95%;
-    height: 300px;
-  }
-}
 
 .carousel-logo {
   position: absolute;
   top: 5%;
-  left: 20%;
+  left: 9%;
   width: 160px;
   z-index: 20;
 }
 
-.hamburger-container {
-  position: absolute;
-  top: 60px; /* Distance from the top edge */
-  right: 16%; /* Distance from the right edge */
-  z-index: 20; /* Ensure it is above other elements */
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  right: 40%;
+  text-align: justify;
+  font-size: 100%;
+
 }
 
-/* Hamburger menu styling */
+.text p {
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center container */
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.text img.Symbol {
+  width: 100%; 
+  height: auto;
+  margin-top: 60px;
+  margin-left: 20%; 
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center; 
+  /* width: 100%; */
+ /* aspect-ratio:2/4 ; */
+
+
+
+}
+
+.image-container img.Symbol {
+  width: 100%; /* Make image fit container width */
+  max-width: 70%; 
+  height: auto;
+  margin-bottom: 19%;
+  /* width: 100%; */
+}
+
+
+.banner {
+  position: absolute;
+  top: 44%;
+  right: 50%; 
+  transform: translateX(-50%); 
+  background: rgb(54, 73, 216); 
+  color: #fff; 
+  padding: 10px; 
+  text-align: center; 
+  z-index: 10; 
+  width: 40%;
+  /* height:9%; */
+}
+
+
+.black-banner {
+  position: absolute;
+  bottom: 49%;
+  left: 70%;
+  width: 30%;
+  height: 10%;
+  background-color: black;
+  z-index: 0;
+}
+
+/* Basic styling for hamburger menu */
+.hamburger-container {
+  position: absolute;
+  top: 9%; /* Adjust top position as needed */
+  right: 10%; /* Adjust right position as needed */
+  z-index: 20;
+}
+
 .hamburger-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 30px; /* Width of the hamburger menu */
-  height: 20px; /* Height of the hamburger menu */
-  cursor: pointer; /* Indicate it is clickable (optional) */
+  height: 24px; /* Height of the hamburger menu */
+  cursor: pointer;
 }
 
-/* Individual bars in the hamburger menu */
 .hamburger-bar {
-  width: 100%; /* Full width of the container */
-  height: 3px; /* Thickness of the bars */
-  background-color: #000; /* Color of the bars */
-  border-radius: 3px; /* Rounded edges of the bars */
+  width: 100%;
+  height: 4px; /* Height of each bar */
+  background-color: #000; /* Color of each bar */
+  border-radius: 2px; /* Rounded corners for bars */
 }
 
-.text {
-  font-family: "Lora", serif; /* Choose a clean, readable font */
-  font-size: 16px; /* Set a standard font size */
-  line-height: 1.6; /* Increase line height for better readability */
-  color: #333; /* Set a dark gray color for text */
-  margin: 20px auto; /* Center the paragraph with margin */
-  padding: 0 10px; /* Add some padding for better spacing on smaller screens */
-  max-width: 800px; /* Set a max-width to prevent the text from being too wide */
-  text-align: justify;
-  margin-top: 50px; /* Space between carousel and text */
-  margin-right: 36%;
-}
-.symbols {
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-  width: 30%;
-  z-index: 20;
-  text-align: justify;
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .hamburger-menu {
+    width: 25px; /* Smaller width for medium screens */
+    height: 20px; /* Smaller height for medium screens */
+  }
+
+  .hamburger-bar {
+    height: 3px; /* Smaller height for bars */
+  }
 }
 
-.banner {
-  position: absolute;
-  top: 44%; /* Position from the top of the carousel */
-  right: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  background: rgb(54, 73, 216); /* Semi-transparent background */
-  color: #fff; /* White text color */
-  padding: 10px; /* Padding around the banner */
-  text-align: center; /* Center text */
-  z-index: 10; /* Ensure it stays on top of carousel images */
-  width: 30%; /* Adjust width as needed */
+@media (max-width: 992px) {
+  .hamburger-container {
+    top: 15px; /* Adjust position for smaller screens */
+    right: 15px; /* Adjust position for smaller screens */
+  }
+
+  .hamburger-menu {
+    width: 22px; /* Even smaller width for smaller screens */
+    height: 18px; /* Even smaller height for smaller screens */
+  }
+
+  .hamburger-bar {
+    height: 3px; /* Consistent bar height */
+  }
 }
+
+@media (max-width: 768px) {
+  .hamburger-container {
+    top: 10px; /* Adjust position for mobile screens */
+    right: 10px; /* Adjust position for mobile screens */
+  }
+
+  .hamburger-menu {
+    width: 20px; /* Adjust width for mobile screens */
+    height: 16px; /* Adjust height for mobile screens */
+  }
+
+  .hamburger-bar {
+    height: 2px; /* Adjust bar height for mobile screens */
+  }
+}
+
+.cards {
+  display: flex;
+  width: 78%;
+  margin-top: 10vw;
+  margin-left: 9%;
+}
+.card {
+  background-color:#061c2c;
+  color: white;
+  border: none;
+  margin: 0.2vw;
+  padding-left: 1vw;
+  text-align: start;
+  width: 33.333%;
+}
+.card h1{
+  font-size: 2vw;
+  font-weight: normal;
+  margin-right: 5vw;
+}
+.buttons {
+  display: flex;
+  width: 78%;
+  margin-top: 3vh;
+  margin-bottom: 40%;
+  margin-left: 9%;
+}
+
+.btn {
+  display: flex;
+  background-color: rgba(36, 74, 194);
+  padding-left: 1vw;
+  margin: 0.1vw;
+  width: 23%;
+}
+.text-h {
+  font-size: 0.7vw;
+  font-weight: normal;
+  color: white;
+}
+.arrow {
+  width: 4vw;
+  height: 4vh;
+  margin-left: auto;
+}
+.icon {
+  width: 5vw;
+  height: 10vh;
+}
+
